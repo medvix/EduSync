@@ -1,0 +1,87 @@
+.Course {
+  display: flex;
+  border: 3px solid darkorange;
+  border-radius: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: darkorange;
+  width: 18rem;
+  height: 21rem;
+
+  img {
+    height: 8rem;
+    width: auto;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: orange;
+  }
+}
+
+.modal-content {
+   background-color: #fefefe;
+   border-radius: 1rem;
+   padding: 20px; /* Vnútorný okraj pre obsah */
+   padding-right: 30px; /* Dodatočný vnútorný okraj vpravo pre scrollbar */
+   width: auto;
+   max-height: 80%;
+   overflow-y: auto;
+   margin: auto;
+   border: 1px solid #888;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   box-sizing: border-box; /* Zaistí, že padding a border sú zahrnuté do šírky a výšky */
+ }
+
+/* Štýly pre scrollbar - môžu zostať nezmenené */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Zvyšok vášho CSS by ostal nezmenený */
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

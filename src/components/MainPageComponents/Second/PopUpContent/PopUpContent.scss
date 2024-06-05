@@ -1,0 +1,244 @@
+.popup-content {
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  color: black;
+
+  /* Štýly pre HTML elementy vložené cez dangerouslySetInnerHTML */
+  b, strong {
+    font-weight: bold;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  ul, ol {
+    list-style-position: inside;
+    text-align: left;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      background-color: #ff7f50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken(#ff7f50, 10%);
+      }
+
+      &:disabled {
+        background-color: lighten(#ff7f50, 20%);
+        cursor: default;
+      }
+    }
+  }
+
+  .exercise-container {
+    text-align: left;
+
+    button {
+      background-color: #f0f0f0;
+      color: #333;
+      border: 1px solid #ddd;
+      margin: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e0e0e0;
+      }
+    }
+  }
+
+  .drag-and-drop-container {
+    .draggable-item {
+      cursor: pointer;
+      margin: 10px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .drop-target {
+      margin: 10px;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      min-height: 50px;
+    }
+  }
+
+  .matching-exercise-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .column {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+
+      .matching-option {
+        background-color: #f0f0f0;
+        color: #333;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: left;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+
+        &.selected {
+          background-color: #ff7f50;
+          color: white;
+        }
+      }
+    }
+
+    .column.left {
+      margin-right: 20px;
+    }
+
+    .column.right {
+      margin-left: 20px;
+    }
+  }
+
+  .exercise-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: black;
+
+    .blank {
+      cursor: pointer;
+      border-bottom: 2px solid #ccc;
+      min-width: 100px;
+      margin: 0 5px;
+      text-align: center;
+    }
+  }
+
+  .options {
+    .draggable-option {
+      cursor: pointer;
+      margin: 5px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background-color: #6e6e6e;
+    }
+  }
+
+  .check-answers-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#ff7f50, 10%);
+    }
+  }
+
+  .check-result {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+    &.correct {
+      background-color: green;
+      color: white;
+    }
+
+    &.incorrect {
+      background-color: red;
+      color: white;
+    }
+  }
+
+  .quiz-question {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #ff7f50;
+      color: #333;
+      border: 1px solid #ff7f50;
+      padding: 10px 15px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: darken(#ff7f50, 10%);
+      }
+
+      &.selected {
+        background-color: #ff7f50;
+        color: white;
+      }
+    }
+
+    .correct, .incorrect {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+  }
+}

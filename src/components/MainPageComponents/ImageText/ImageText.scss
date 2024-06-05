@@ -1,0 +1,25 @@
+.image-text-wrapper {
+  --primary-gap-scale: clamp(2rem, 2vw, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--primary-gap-scale);
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+  color: white;
+
+  .text-container {
+    --text-width: clamp(15rem, 40vw, 40rem);
+    max-width: var(--text-width);
+    background-color: darkorange;
+    padding: 2rem;
+    border-radius: 2rem;
+  }
+
+  .image-container {
+    img {
+      --primary-image-height: clamp(15rem, 30vw, 15rem);
+      min-height: var(--primary-image-height);
+    }
+  }
+}

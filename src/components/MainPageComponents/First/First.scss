@@ -1,0 +1,25 @@
+.MainContent {
+
+  --primary-gap-scale: clamp(2rem, 2vw, 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--primary-gap-scale);
+  flex-wrap: wrap;
+  padding: 2rem;
+  color: white;
+
+  .LeftMainContent {
+    --text-width: clamp(15rem, 40vw, 40rem);
+    max-width: var(--text-width);
+    font-size: larger;
+
+  }
+
+  .RightMainContent {
+    img {
+      --primary-image-height: clamp(15rem, 30vw, 30rem);
+      min-height: var(--primary-image-height);
+    }
+  }
+}

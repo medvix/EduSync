@@ -1,0 +1,20 @@
+// check mixins from https://sass-lang.com/documentation/at-rules/mixin
+
+@mixin clearfix-before {
+  &:before {
+	content: "";
+	display: table;
+	clear: both;
+  }
+}
+
+@mixin clearfix-after {
+  &:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+}
+
+
+
